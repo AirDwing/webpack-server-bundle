@@ -26,6 +26,7 @@
     "babel-loader": "^7.1.2",
     "babel-minify-webpack-plugin": "^0.2.0",
     "babel-plugin-transform-pipeline": "https://github.com/AirDwing/babel-plugin-transform-pipeline.git",
+    "babel-preset-env": "^1.6.0",
     "babel-register": "^6.26.0",
     "clean-webpack-plugin": "^0.1.16",
     "eslint": "^4.6.1",

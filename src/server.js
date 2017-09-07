@@ -1,6 +1,6 @@
-const Koa = require('koa');
-const logger = require('koa-api-logger');
-const { enabledModules } = require('../config');
+import Koa from 'koa';
+import logger from 'koa-api-logger';
+import { enabledModules } from '../config';
 
 const app = new Koa();
 
@@ -12,4 +12,4 @@ enabledModules.forEach((mod) => {
   routes.middleware() |> app.use;
 });
 
-module.exports = app;
+export default app;

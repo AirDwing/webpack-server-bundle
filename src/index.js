@@ -1,5 +1,5 @@
-const { server: serverOptions } = require('../config');
-const app = require('./server');
+import { server as serverOptions } from '../config';
+import app from './server';
 
 app.listen(serverOptions);
 console.log(new Date());

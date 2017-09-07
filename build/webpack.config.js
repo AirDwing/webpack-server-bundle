@@ -3,6 +3,7 @@ const webpack = require('webpack');
 const path = require('path');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const nodeExternals = require('webpack-node-externals');
+const MinifyPlugin = require('babel-minify-webpack-plugin');
 
 module.exports = {
   entry: {
@@ -39,7 +40,9 @@ module.exports = {
       root: path.resolve(__dirname, '../')
     }),
     new webpack.DefinePlugin({
-      'process.env.NODE_ENV': '"production"'
-    })
+      'process.env.NODE_ENV': '"production"',
+      'process.env.API_ENV': `"${process.env.API_ENV || 'development'}"`
+    }),
+    new MinifyPlugin()
   ]
 };

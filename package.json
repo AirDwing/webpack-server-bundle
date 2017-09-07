@@ -24,6 +24,7 @@
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
+    "babel-minify-webpack-plugin": "^0.2.0",
     "babel-plugin-transform-pipeline": "https://github.com/AirDwing/babel-plugin-transform-pipeline.git",
     "babel-register": "^6.26.0",
     "clean-webpack-plugin": "^0.1.16",

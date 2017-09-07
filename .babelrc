@@ -1,0 +1,8 @@
+{
+  "parserOpts": {
+    "parser": "@airdwing/babylon"
+  },
+  "plugins": [
+    "transform-pipeline"
+  ]
+}

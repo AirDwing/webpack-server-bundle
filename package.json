@@ -1,0 +1,36 @@
+{
+  "name": "webpack-server-bundle",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "babel-node src",
+    "postinstall": "node ./bin/postinstall"
+  },
+  "dependencies": {
+    "babel-polyfill": "^6.26.0",
+    "babel-runtime": "^6.26.0",
+    "joi": "^10.6.0",
+    "koa": "^2.3.0",
+    "koa-api-logger": "^1.0.5",
+    "koa-joi-router": "^5.0.0",
+    "koa-router": "^7.2.1",
+    "pipefn": "^1.0.1",
+    "source-map-support": "^0.4.17"
+  },
+  "devDependencies": {
+    "@airdwing/babel-eslint": "^8.0.0-alpha.17",
+    "@airdwing/babylon": "^7.0.0",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-plugin-transform-pipeline": "https://github.com/AirDwing/babel-plugin-transform-pipeline.git",
+    "babel-register": "^6.26.0",
+    "eslint": "^4.6.1",
+    "eslint-config-dwing": "^1.1.0",
+    "rimraf": "^2.6.1",
+    "rollup": "^0.49.2",
+    "rollup-plugin-babel": "^3.0.2"
+  },
+  "repository": "git@github.com:AirDwing/webpack-server-bundle.git",
+  "author": "Willin Wang <willin@willin.org>",
+  "license": "MIT"
+}

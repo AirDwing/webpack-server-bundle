@@ -1,0 +1,12 @@
+#! /usr/bin/env node
+const fs = require('fs');
+const path = require('path');
+const { execSync, spawnSync } = require('child_process');
+
+execSync('rm -rf node_modules/koa-joi-router/node_modules/koa-router');
+
+fs.exists('node_modules/babel-plugin-transform-pipeline/lib', (e) => {
+  e || spawnSync('yarn', {
+    cwd: path.join(__dirname, '../node_modules/babel-plugin-transform-pipeline')
+  });
+});

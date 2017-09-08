@@ -9,3 +9,4 @@ A webpack server bundle demo project.
 ## TBD
 
 - `config`目录会被完整打包(如果有多个配置, 全部被包含)
+- `src` 目录会被完整打包(即便设置了`enabledModules`)

@@ -4,6 +4,7 @@ const path = require('path');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const nodeExternals = require('webpack-node-externals');
 const MinifyPlugin = require('babel-minify-webpack-plugin');
+const { enabledModules } = require('../config');
 
 module.exports = {
   entry: {
@@ -43,6 +44,7 @@ module.exports = {
       'process.env.NODE_ENV': '"production"',
       'process.env.API_ENV': `"${process.env.API_ENV || 'development'}"`
     }),
+    new webpack.ContextReplacementPlugin(/src/, new RegExp(`^./(lib|hook|${enabledModules.join('|')})/.*$`)),
     new MinifyPlugin()
   ]
 };

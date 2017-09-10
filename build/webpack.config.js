@@ -13,8 +13,7 @@ module.exports = {
   target: 'node',
   output: {
     path: path.resolve(__dirname, '../dist'),
-    filename: '[name].js',
-    publicPath: '/'
+    filename: '[name].js'
   },
   devtool: '#source-map',
   externals: [nodeExternals()],
@@ -22,8 +21,7 @@ module.exports = {
     modules: [
       'node_modules',
       path.resolve(__dirname, '../src')
-    ],
-    extensions: ['.js', '.json']
+    ]
   },
   module: {
     rules: [
